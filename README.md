@@ -11,7 +11,7 @@ Este proyecto es una aplicación para gestionar y visualizar una galería de fot
 
 ## Uso
 
-1. **Visualización del Proyecto:** Instala el repositorio de manera local o visita el enlace desplegado en [Vercel](https://tu-enlace-desplegado.com/).
+1. **Visualización del Proyecto:** Instala el repositorio de manera local o visita el enlace desplegado en [Vercel](https://space-appv2.vercel.app/).
 2. **Buscar por Título:** Usa la barra de búsqueda para encontrar fotos por título.
 3. **Ver Detalles de Fotos:** Haz clic en una foto para ver su contenido completo y opciones adicionales como marcarla como favorita o solicitar zoom.
 4. **Navegar en la Galería:** Explora la galería para ver diferentes fotos y detalles asociados.
@@ -38,7 +38,7 @@ Este proyecto es una aplicación para gestionar y visualizar una galería de fot
 ```bash
 npm install
 ```
-3. **Iniciar la Base de Datos con JSON Server:** Si estás utilizando JSON Server para simular una API, asegúrate de tener el archivo fotos.json en la raíz del proyecto (o en la ubicación correspondiente). Luego, ejecuta el siguiente comando para iniciar el servidor JSON:
+3. **Iniciar la Base de Datos con JSON Server:** Si estás utilizando JSON Server para simular una API, asegúrate de tener el archivo db.json en la raíz del proyecto (o en la ubicación correspondiente). Luego, ejecuta el siguiente comando para iniciar el servidor JSON:
 
 ``` bash
 json-server --watch db.json --port 3000
