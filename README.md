@@ -31,7 +31,7 @@ Este proyecto es una aplicación para gestionar y visualizar una galería de fot
 1. **Clonar el Repositorio:** Clona este repositorio en tu máquina local utilizando Git.
 
    ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   git clone https://github.com/Ivanmx19/SpaceAppv2.git
    ```
 2. **Instalar Dependencias:** Navega al directorio del proyecto y ejecuta:
 
@@ -56,7 +56,7 @@ npm start
 
 ## Despliegue
 
-- El sitio web está desplegado en Vercel y se puede acceder a través del siguiente enlace: [SpaceApp](https://petshop-kappa-ten.vercel.app/).
+- El sitio web está desplegado en Vercel y se puede acceder a través del siguiente enlace: [SpaceApp](https://space-appv2.vercel.app/).
 
 ## Licencia
 - Este proyecto está bajo la Licencia MIT.
