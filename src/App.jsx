@@ -24,7 +24,7 @@ const AppContainer = styled.div`
   padding-top:200px;
 
   @media (max-width: 599px) {
-    padding-top:150px;
+    padding-top:200px;
   }
 
   /* Media query para tabletas */
