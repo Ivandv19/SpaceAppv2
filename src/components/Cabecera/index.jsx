@@ -14,6 +14,21 @@ const HeaderEstilizado = styled.header`
     img {
         width: 212px; /* Estilo específico para la imagen del logo */
     }
+
+    @media (max-width: 599px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px 20px 20px;
+    
+  }
+
+  /* Media query para tabletas */
+  @media (min-width: 600px) and (max-width: 1199px) {
+
+    justify-content: space-between;
+    gap: 50px;
+ 
+  }
 `;
 
 const Cabecera = () => {
