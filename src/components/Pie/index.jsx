@@ -3,12 +3,14 @@ import { styled } from 'styled-components';
 // Componente estilizado para el pie de página
 const PieEstilizado = styled.footer`
     display: flex;
-    justify-content: space-between;
+   flex-direction: column-reverse;
+   gap: 20px;
     align-items: center;
     width: 100%;
+    height: 100%;
     margin-top: 100px;
     background-color: #04244F;
-    padding: 22px;
+    padding: 50px;
     box-sizing: border-box;
 `;
 
@@ -28,6 +30,7 @@ const PieTexto = styled.p`
     font-size: 16px;
     color: white;
     margin: 0;
+    text-align: center;
 `;
 
 // Componente funcional Pie
@@ -51,7 +54,7 @@ const Pie = () => {
                     </a>
                 </li>
             </IconoContainer>
-            <PieTexto>Desarrollado por Alura y Ivan Cruz - 2024 🇲🇽 <br /> Estudiante ONE (G6) - Oracle Next Education </PieTexto>
+            <PieTexto>Creado por Ivan Cruz - 2024 🇲🇽 <br /> Estudiante ONE (G6) - Oracle Next Education </PieTexto>
         </PieEstilizado>
     );
 }
