@@ -9,19 +9,22 @@ import Cargando from "../Cargando";
 
 // Contenedor principal de la galería con estilos
 const GaleriaContainer = styled.div`
+    width: 100%;
     display: flex;
-    gap: 24px;
+
+  
 `;
 
 // Sección fluida que ocupa todo el espacio restante
 const SeccionFluida = styled.section`
-    flex-grow: 1;
+width: 100%;
+
 `;
 
 // Contenedor de imágenes con estilos
 const ImagenesContainer = styled.section`
+width: 100%;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 24px;
 `;

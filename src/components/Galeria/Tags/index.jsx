@@ -6,7 +6,7 @@ const TagsContainer = styled.section`
     display: flex;
     align-items: center;
     gap: 64px;
-    margin-top: 56px;
+    margin: 25px 0;
 `;
 
 // Título de la sección de tags con estilos
@@ -27,8 +27,7 @@ const Tag = styled.button`
     padding: 12px;
     box-sizing: border-box;
     border: 2px solid transparent;
-    &:hover {
-      border-color: #C98CF1;
+    &:hover {       border-color: #C98CF1;
     }
 `;
 

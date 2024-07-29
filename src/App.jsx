@@ -28,6 +28,7 @@ const AppContainer = styled.div`
 const MainContainer = styled.main`
   display: flex; // Utilizar flexbox para diseño flexible
   gap: 24px; // Espacio entre elementos
+  padding: 0 20px;
 `;
 
 // Contenedor para la galería principal y otros elementos del contenido

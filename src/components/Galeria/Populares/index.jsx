@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
 import Titulo from "../../Titulo"; // Importa el componente de título
-
 import fotos from './fotos-populares.json'; // Importa el archivo JSON con las fotos populares
 
 // Estilo para la columna de fotos populares
@@ -30,10 +29,18 @@ const Boton = styled.button`
     margin-top: 16px;
 `;
 
+const Populares__container = styled.section`
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+`
+
 // Componente funcional Populares
 const Populares = () => {
     return (
-        <section>
+        <Populares__container>
             {/* Título centrado para la sección de populares */}
             <Titulo $align='center'>Populares</Titulo>
 
@@ -47,7 +54,7 @@ const Populares = () => {
 
             {/* Botón "Ver más" al final de la sección */}
             <Boton>Ver más</Boton>
-        </section>
+        </Populares__container>
     );
 };
 
