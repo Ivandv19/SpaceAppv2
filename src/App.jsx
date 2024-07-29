@@ -5,10 +5,8 @@ import BarraLateral from "./components/BarraLateral";
 import Banner from "./components/Banner";
 import banner from "./assets/banner.png";
 import Galeria from "./components/Galeria";
-import { useEffect, useState } from "react";
 import ModalZoom from "./components/ModalZoom";
 import Pie from "./components/Pie";
-import Cargando from "./components/Cargando";
 import GlobalContextProvider from "./context/GlobalContext";
 
 // Estilo del fondo con gradiente
@@ -20,9 +18,10 @@ const FondoGradiente = styled.div`
 
 // Contenedor principal de la aplicación
 const AppContainer = styled.div`
-  width: 1280px; // Ancho fijo máximo
+  width: 100%; // Ancho fijo máximo
   max-width: 100%; // Ancho máximo para adaptabilidad
   margin: 0 auto; // Centrado horizontal en la página
+  padding-top:200px;
 `;
 
 // Contenedor principal para el contenido principal y lateral
