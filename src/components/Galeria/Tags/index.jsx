@@ -7,6 +7,12 @@ const TagsContainer = styled.section`
     align-items: center;
     gap: 64px;
     margin: 25px 0;
+
+
+    @media (max-width: 599px) {
+        gap: 5px;
+        flex-direction: column;
+    }
 `;
 
 // Título de la sección de tags con estilos
@@ -36,6 +42,13 @@ const Div = styled.div`
     display: flex;
     gap: 24px;
     justify-content: end;
+
+    @media (max-width: 599px){
+        width: 100%;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 `;
 
 // Componente funcional Tags

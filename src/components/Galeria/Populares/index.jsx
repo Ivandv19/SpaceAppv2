@@ -7,6 +7,8 @@ const ColumnaFotos = styled.section`
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    
 `;
 
 // Estilo para la imagen de cada foto popular
@@ -35,6 +37,10 @@ const Populares__container = styled.section`
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+
+    @media (max-width: 599px){
+        width: 100%;
+    }
 `
 
 // Componente funcional Populares

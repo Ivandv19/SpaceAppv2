@@ -12,6 +12,10 @@ const FigureEstilizada = styled.figure`
     border-radius: 20px; /* Borde redondeado */
     max-width: 100%; /* Ancho máximo del 100% */
     background-size: cover; /* Ajustar el tamaño de la imagen de fondo */
+
+    @media (max-width: 599px){
+        
+    }
 `;
 
 // Estilo para el título del banner

@@ -32,6 +32,11 @@ const Figure = styled.figure`
             font-size: 16px; // Tamaño de fuente para los títulos
         }
     }
+
+    
+    @media (max-width: 599px){
+        width: 100%;
+    }
 `;
 
 // Estilos para el pie de la figura

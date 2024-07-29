@@ -22,6 +22,16 @@ const AppContainer = styled.div`
   max-width: 100%; // Ancho máximo para adaptabilidad
   margin: 0 auto; // Centrado horizontal en la página
   padding-top:200px;
+
+  @media (max-width: 599px) {
+    padding-top:150px;
+  }
+
+  /* Media query para tabletas */
+  @media (min-width: 600px) and (max-width: 1199px) {
+    padding-top:200px;
+  }
+
 `;
 
 // Contenedor principal para el contenido principal y lateral
@@ -29,6 +39,18 @@ const MainContainer = styled.main`
   display: flex; // Utilizar flexbox para diseño flexible
   gap: 24px; // Espacio entre elementos
   padding: 0 20px;
+
+   /* Media query para dispositivos móviles (celulares) */
+   @media (max-width: 599px) {
+    flex-direction: column;
+    
+  }
+
+  /* Media query para tabletas */
+  @media (min-width: 600px) and (max-width: 1199px) {
+
+    flex-direction: column;
+  }
 `;
 
 // Contenedor para la galería principal y otros elementos del contenido
@@ -59,7 +81,7 @@ const App = () => {
               {/* Contenido principal de la galería */}
               <ContenidoGaleria>
                 {/* Banner con texto y fondo */}
-                <Banner texto="La galería más completa de fotos del espacio" backgroundImage={banner} />
+                <Banner texto={"La galería más completa de fotos del espacio"} backgroundImage={banner} />
                 {/* Componente de galería */}
                 <Galeria />
               </ContenidoGaleria>

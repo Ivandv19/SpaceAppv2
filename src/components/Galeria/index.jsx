@@ -12,21 +12,25 @@ const GaleriaContainer = styled.div`
     width: 100%;
     display: flex;
 
-  
+    @media (max-width: 599px){
+        flex-direction: column;
+    }
 `;
 
 // Sección fluida que ocupa todo el espacio restante
 const SeccionFluida = styled.section`
 width: 100%;
 
+
 `;
 
 // Contenedor de imágenes con estilos
 const ImagenesContainer = styled.section`
-width: 100%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+
 `;
 
 // Componente funcional Galeria

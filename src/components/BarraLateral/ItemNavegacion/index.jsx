@@ -10,7 +10,11 @@ const ItemListaEstilizado = styled.li`
     gap: 16px; /* Espacio entre el icono y el texto */
     color: ${props => (props.$activo ? "#7B78E5" : "#D9D9D9")}; /* Color del texto según esté activo o no */
     font-family: ${props => (props.$activo ? "GandhiSansBold" : "GandhiSansRegular")}; /* Familia de fuente según esté activo o no */
+
+    
 `;
+
+
 
 const ItemNavegacion = ({ children, iconoActivo, iconoInactivo, activo = false }) => {
     return (
