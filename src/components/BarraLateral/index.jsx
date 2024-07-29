@@ -7,6 +7,9 @@ const ListaEstilizada = styled.ul`
   padding: 0;
   list-style: none;
   width: 236px; /* Ancho fijo para la barra lateral */
+  display: flex;
+  flex-direction: column;
+
 
   @media (max-width: 599px) {
     width: 100%;
@@ -55,7 +58,7 @@ const BarraLateral = () => {
                         iconoInactivo="/iconos/me-gusta-inactivo.png"
                         activo={false} // Propiedad para indicar que este item está activo
                     >
-                        <p>Más Me Gusta</p>
+                        Más Me Gusta
                     </ItemNavegacion>
                     {/* Item de navegación para "Nuevas" */}
                     <ItemNavegacion
@@ -63,7 +66,7 @@ const BarraLateral = () => {
                         iconoInactivo="/iconos/nuevas-inactivo.png"
                         activo={false} // Propiedad para indicar que este item está activo
                     >
-                        <p>Nuevas</p>
+                        Nuevas
                     </ItemNavegacion>
                     {/* Item de navegación para "Sorpréndeme" */}
                     <ItemNavegacion
@@ -71,7 +74,7 @@ const BarraLateral = () => {
                         iconoInactivo="/iconos/sorprendeme-inactivo.png"
                         activo={false} // Propiedad para indicar que este item está activo
                     >
-                        <p >Sorpréndeme</p>
+                        Sorpréndeme
                     </ItemNavegacion>
                 </ListaEstilizada>
             </nav>
