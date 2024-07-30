@@ -47,7 +47,9 @@ const Div = styled.div`
         width: 100%;
         gap: 10px;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        align-items: center;
+        align-self: center;
     }
 `;
 

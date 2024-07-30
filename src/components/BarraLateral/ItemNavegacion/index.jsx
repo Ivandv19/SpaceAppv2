@@ -38,8 +38,8 @@ const ItemNavegacion = ({ children, iconoActivo, iconoInactivo, activo, onClick 
     return (
         <ItemListaEstilizado $activo={activo} onClick={onClick}>
             <img src={activo ? iconoActivo : iconoInactivo}
-             alt="Icono de navegación" />
-            <Seccion $activo={activo} >{children}</Seccion>
+                alt="Icono de navegación" />
+            <Seccion $activo={activo}>{children}</Seccion>
         </ItemListaEstilizado>
     );
 };
