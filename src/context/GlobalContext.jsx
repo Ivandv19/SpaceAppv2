@@ -59,7 +59,7 @@ const GlobalContextProvider = ({ children }) => {
     // Efecto para cargar datos iniciales de la galería desde una API simulada
     useEffect(() => {
         const getData = async () => {
-            const res = await fetch('http://localhost:3000/fotos');
+            const res = await fetch('https://my-json-server.typicode.com/Ivanmx19/api_fotos_spaceapp2/fotos');
             const data = await res.json();
             dispatch({ type: 'SET_FOTOS_DE_GALERIA', payload: data });
         };
