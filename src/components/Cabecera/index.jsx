@@ -7,6 +7,7 @@ const HeaderEstilizado = styled.header`
     padding: 30px 20px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     position: fixed;
     top: 0;
     box-sizing: border-box;
