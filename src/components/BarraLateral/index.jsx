@@ -37,7 +37,7 @@ const ListaEstilizada = styled.ul`
 
 
 const BarraLateral = () => {
-    const [activo, setActivo] = useState(null);
+    const [activo, setActivo] = useState("inicio");
 
     const handleClick = (itemId) => {
         setActivo(itemId); // Actualiza el estado con el ID del item clickeado
