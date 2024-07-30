@@ -16,6 +16,11 @@ const ItemListaEstilizado = styled.li`
         gap: 10px;
         flex-direction: column;
         justify-content: space-between;
+        
+    }
+
+    @media (min-width: 600px) and (max-width: 1199px){
+        gap: 5px;
     }
 
     

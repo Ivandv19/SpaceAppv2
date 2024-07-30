@@ -10,6 +10,7 @@ const ListaEstilizada = styled.ul`
   width: 236px; /* Ancho fijo para la barra lateral */
   display: flex;
   flex-direction: column;
+  gap: 40px;
 
 
 
@@ -18,6 +19,8 @@ const ListaEstilizada = styled.ul`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    gap: 5px;
+    font-size: 25px;
   }
 
   /* Media query para tabletas */
@@ -26,6 +29,8 @@ const ListaEstilizada = styled.ul`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    gap: 5px;
+    
   }
 `;
 
