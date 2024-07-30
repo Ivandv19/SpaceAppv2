@@ -21,7 +21,7 @@ const ItemListaEstilizado = styled.li`
     
 `;
 
-const Parrafo = styled.p`
+const Seccion = styled.div`
 @media (max-width: 599px){
     display: ${props => (props.$activo ? "block" : "none")};
 }
@@ -35,7 +35,7 @@ const ItemNavegacion = ({ children, iconoActivo, iconoInactivo, activo, onClick 
         <ItemListaEstilizado $activo={activo} onClick={onClick}>
             <img src={activo ? iconoActivo : iconoInactivo}
              alt="Icono de navegación" />
-            <Parrafo $activo={activo} >{children}</Parrafo>
+            <Seccion $activo={activo} >{children}</Seccion>
         </ItemListaEstilizado>
     );
 };

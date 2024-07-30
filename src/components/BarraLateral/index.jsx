@@ -49,7 +49,7 @@ const BarraLateral = () => {
                         onClick={() => handleClick('inicio')}
                         style={{ cursor: 'pointer' }}
                     >
-                        <p>Inicio</p>
+                        <section>Inicio</section>
                     </ItemNavegacion>
                     <ItemNavegacion
                         iconoActivo="/iconos/mas-vistas-activo.png"
@@ -58,7 +58,7 @@ const BarraLateral = () => {
                         onClick={() => handleClick('masVistas')}
                         style={{ cursor: 'pointer' }}
                     >
-                        <p>Más vistas</p>
+                        <section>Más vistas</section>
                     </ItemNavegacion>
                     <ItemNavegacion
                         iconoActivo="/iconos/me-gusta-activo.png"
@@ -67,7 +67,7 @@ const BarraLateral = () => {
                         onClick={() => handleClick('meGusta')}
                         style={{ cursor: 'pointer' }}
                     >
-                        <p>Más Me Gusta</p>
+                        <section>Más Me Gusta</section>
                     </ItemNavegacion>
                     <ItemNavegacion
                         iconoActivo="/iconos/nuevas-activo.png"
@@ -76,7 +76,7 @@ const BarraLateral = () => {
                         onClick={() => handleClick('nuevas')}
                         style={{ cursor: 'pointer' }}
                     >
-                        <p>Nuevas</p>
+                        <section>Nuevas</section>
                     </ItemNavegacion>
                     <ItemNavegacion
                         iconoActivo="/iconos/sorprendeme-activo.png"
@@ -85,7 +85,7 @@ const BarraLateral = () => {
                         onClick={() => handleClick('sorprendeme')}
                         style={{ cursor: 'pointer' }}
                     >
-                        <p>Sorpréndeme</p>
+                        <section>Sorpréndeme</section>
                     </ItemNavegacion>
                 </ListaEstilizada>
             </nav>
