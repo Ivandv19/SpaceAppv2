@@ -38,7 +38,7 @@ const AppContainer = styled.div`
 const MainContainer = styled.main`
   display: flex; // Utilizar flexbox para diseño flexible
   gap: 24px; // Espacio entre elementos
-  padding: 0 20px;
+  padding: 0;
 
    /* Media query para dispositivos móviles (celulares) */
    @media (max-width: 599px) {

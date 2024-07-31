@@ -28,7 +28,8 @@ const Boton = styled.button`
     border-radius: 10px;
     cursor: pointer;
     width: 100%;
-    margin-top: 16px;
+    margin-top: 50px;
+    
 `;
 
 const Populares__container = styled.section`
@@ -37,6 +38,8 @@ const Populares__container = styled.section`
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 25px;
 
     @media (max-width: 599px){
         width: 100%;

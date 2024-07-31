@@ -11,6 +11,7 @@ import Cargando from "../Cargando";
 const GaleriaContainer = styled.div`
     width: 100%;
     display: flex;
+    box-sizing: border-box;
 
     @media (max-width: 599px){
         flex-direction: column;
@@ -30,6 +31,7 @@ const ImagenesContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    box-sizing: border-box;
 
 `;
 
