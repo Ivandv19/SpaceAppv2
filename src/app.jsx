@@ -22,7 +22,8 @@ const AppContainer = styled.div`
   max-width: 100%; // Ancho máximo para adaptabilidad
   margin: 0 auto; // Centrado horizontal en la página
   padding-top:200px;
-
+  box-sizing: border-box;
+  
   @media (max-width: 599px) {
     padding-top:200px;
   }
@@ -38,7 +39,7 @@ const AppContainer = styled.div`
 const MainContainer = styled.main`
   display: flex; // Utilizar flexbox para diseño flexible
   gap: 24px; // Espacio entre elementos
-  padding: 0;
+  padding: 0 20px;
 
    /* Media query para dispositivos móviles (celulares) */
    @media (max-width: 599px) {
@@ -62,39 +63,39 @@ const ContenidoGaleria = styled.section`
 
 // Componente principal de la aplicación
 const App = () => {
-  return (
-    <>
-      {/* Fondo con gradiente */}
-      <FondoGradiente>
-        {/* Estilos globales de la aplicación */}
-        <GlobalStyles />
-        {/* Proveedor del contexto global */}
-        <GlobalContextProvider>
-          {/* Contenedor principal de la aplicación */}
-          <AppContainer>
-            {/* Componente de cabecera */}
-            <Cabecera />
-            {/* Contenedor principal y lateral */}
-            <MainContainer>
-              {/* Barra lateral */}
-              <BarraLateral />
-              {/* Contenido principal de la galería */}
-              <ContenidoGaleria>
-                {/* Banner con texto y fondo */}
-                <Banner texto={"La galería más completa de fotos del espacio"} backgroundImage={banner} />
-                {/* Componente de galería */}
-                <Galeria />
-              </ContenidoGaleria>
-            </MainContainer>
-          </AppContainer>
-          {/* Componente modal de zoom */}
-          <ModalZoom />
-          {/* Componente de pie de página */}
-          <Pie />
-        </GlobalContextProvider>
-      </FondoGradiente>
-    </>
-  );
+    return (
+        <>
+            {/* Fondo con gradiente */}
+            <FondoGradiente>
+                {/* Estilos globales de la aplicación */}
+                <GlobalStyles />
+                {/* Proveedor del contexto global */}
+                <GlobalContextProvider>
+                    {/* Contenedor principal de la aplicación */}
+                    <AppContainer>
+                        {/* Componente de cabecera */}
+                        <Cabecera />
+                        {/* Contenedor principal y lateral */}
+                        <MainContainer>
+                            {/* Barra lateral */}
+                            <BarraLateral />
+                            {/* Contenido principal de la galería */}
+                            <ContenidoGaleria>
+                                {/* Banner con texto y fondo */}
+                                <Banner texto={"La galería más completa de fotos del espacio"} backgroundImage={banner} />
+                                {/* Componente de galería */}
+                                <Galeria />
+                            </ContenidoGaleria>
+                        </MainContainer>
+                    </AppContainer>
+                    {/* Componente modal de zoom */}
+                    <ModalZoom />
+                    {/* Componente de pie de página */}
+                    <Pie />
+                </GlobalContextProvider>
+            </FondoGradiente>
+        </>
+    );
 }
 
 export default App;
