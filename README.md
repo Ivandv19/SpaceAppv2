@@ -39,7 +39,6 @@ Este proyecto es una aplicación para gestionar y visualizar una galería de fot
 npm install
 ```
 3. **Iniciar la Base de Datos con JSON Server:** Si estás utilizando JSON Server para simular una API, asegúrate de tener el archivo db.json en la raíz del proyecto (o en la ubicación correspondiente). Luego, ejecuta el siguiente comando para iniciar el servidor JSON:
-
 ``` bash
 json-server --watch db.json --port 3000
 ```
