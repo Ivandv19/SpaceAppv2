@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer, useState } from "react";
 
 // Creación del contexto global
 export const GlobalContext = createContext();
@@ -53,6 +53,13 @@ const reducer = (state, action) => {
 
 // Proveedor del contexto global
 const GlobalContextProvider = ({ children }) => {
+
+    const [activo, setActivo] = useState("inicio");
+
+    const handleClick = (itemId) => {
+        setActivo(itemId); // Actualiza el estado con el ID del item clickeado
+    };
+
     // Uso del useReducer para gestionar el estado global con el reductor definido
     const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -69,10 +76,15 @@ const GlobalContextProvider = ({ children }) => {
 
     // Renderizado del proveedor del contexto global con el estado y funciones de dispatch disponibles
     return (
-        <GlobalContext.Provider value={{ state, dispatch }}>
+        <GlobalContext.Provider value={{ state, dispatch, activo, handleClick }}>
             {children}
         </GlobalContext.Provider>
     );
 };
 
 export default GlobalContextProvider;
+
+// Hook personalizado para consumir el contexto global
+export const useGlobalContext = () => {
+    return useContext(GlobalContext);
+};

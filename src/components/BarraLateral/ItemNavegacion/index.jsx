@@ -34,9 +34,11 @@ const Seccion = styled.div`
 
 
 
-const ItemNavegacion = ({ children, iconoActivo, iconoInactivo, activo, onClick }) => {
+const ItemNavegacion = ({ children, iconoActivo, iconoInactivo, activo}) => {
+
+    
     return (
-        <ItemListaEstilizado $activo={activo} onClick={onClick}>
+        <ItemListaEstilizado $activo={activo} >
             <img src={activo ? iconoActivo : iconoInactivo}
                 alt="Icono de navegación" />
             <Seccion $activo={activo}>{children}</Seccion>

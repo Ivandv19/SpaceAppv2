@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ItemNavegacion from "./ItemNavegacion";
 import { useState } from "react";
+import { useGlobalContext } from "../../context/GlobalContext";
 
 // Estilo para la lista no ordenada (ul) que contiene los elementos de navegación
 const ListaEstilizada = styled.ul`
@@ -37,11 +38,8 @@ const ListaEstilizada = styled.ul`
 
 
 const BarraLateral = () => {
-    const [activo, setActivo] = useState("inicio");
 
-    const handleClick = (itemId) => {
-        setActivo(itemId); // Actualiza el estado con el ID del item clickeado
-    };
+    const { activo, handleClick } = useGlobalContext();
 
     return (
         <aside>
