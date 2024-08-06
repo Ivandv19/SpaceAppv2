@@ -44,9 +44,11 @@ npm install
 json-server --watch db.json --port 3000
 ```
 4. **Iniciar el Proyecto:** Ejecuta el proyecto localmente con:
+
 ```bash
 npm start
 ```
+
 ## Créditos
 - Este proyecto fue desarrollado como parte de un ejercicio de desarrollo web.
 - Desarrollado por [Alura Latam](https://www.linkedin.com/company/alura-latam/).
