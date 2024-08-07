@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import ItemNavegacion from "./ItemNavegacion";
-import { useState } from "react";
 import { useGlobalContext } from "../../context/GlobalContext";
 
 // Estilo para la lista no ordenada (ul) que contiene los elementos de navegación
@@ -8,11 +7,22 @@ const ListaEstilizada = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 236px; /* Ancho fijo para la barra lateral */
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  width: 236px; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 40px; 
+  padding: 0 20px; 
+  box-sizing: border-box;
 
+
+  @media (min-width: 600px) and (max-width: 1199px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px;
+    
+  }
 
 
   @media (max-width: 599px) {
@@ -22,17 +32,12 @@ const ListaEstilizada = styled.ul`
     justify-content: space-around;
     gap: 5px;
     font-size: 25px;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 
   /* Media query para tabletas */
-  @media (min-width: 600px) and (max-width: 1199px) {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 5px;
-    
-  }
+
 `;
 
 

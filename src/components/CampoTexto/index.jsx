@@ -70,6 +70,7 @@ const CampoTexto = () => {
                 ref={cajaConsulta}
                 type="text"
                 placeholder="¿Qué estás buscando?"
+                
             />
             {/* Ícono de lupa para enviar la consulta */}
             <IconoLupa

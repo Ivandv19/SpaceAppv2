@@ -9,10 +9,16 @@ const TagsContainer = styled.section`
     margin: 25px 0;
 
 
+    @media (min-width: 600px) and (max-width: 1199px) {
+        flex-wrap: wrap;
+    }
+
     @media (max-width: 599px) {
         gap: 5px;
         flex-direction: column;
     }
+
+
 `;
 
 // Título de la sección de tags con estilos
@@ -42,6 +48,11 @@ const Div = styled.div`
     display: flex;
     gap: 24px;
     justify-content: end;
+
+    @media (min-width: 600px) and (max-width: 1199px) {
+        width: 100%;
+        justify-content: space-evenly;
+    }
 
     @media (max-width: 599px){
         width: 100%;
