@@ -71,7 +71,7 @@ const GlobalContextProvider = ({ children }) => {
             dispatch({ type: 'SET_FOTOS_DE_GALERIA', payload: data });
         };
 
-        setTimeout(() => getData(), 3000); // Simulación de carga de datos con delay de 1 segundos
+        setTimeout(() => getData(), 1000); // Simulación de carga de datos con delay de 1 segundos
     }, []); // Se ejecuta solo al montar el componente inicialmente
 
     // Renderizado del proveedor del contexto global con el estado y funciones de dispatch disponibles

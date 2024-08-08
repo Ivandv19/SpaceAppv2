@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
-import tags from './tags.json'; // Importa el archivo JSON con los tags
+
+import { useEffect, useState } from 'react';
 
 // Contenedor principal de los tags con estilos
 const TagsContainer = styled.section`
@@ -39,8 +40,8 @@ const Tag = styled.button`
     padding: 12px;
     box-sizing: border-box;
     border: 2px solid transparent;
-    &:hover {       border-color: #C98CF1;
-    }
+    border-color: ${(props) => (props.selected ? '#C98CF1' : 'transparent')}; 
+    
 `;
 
 // Contenedor div para los tags
@@ -66,6 +67,31 @@ const Div = styled.div`
 
 // Componente funcional Tags
 const Tags = () => {
+    // Estado para el tag seleccionado
+    const [tagSeleccionado, setTagSeleccionado] = useState(0);
+    // Estado para los tags
+    const [tags, setTags] = useState([]);
+
+    const obtenerTags = async () => {
+
+        // Petición a la API para obtener los tags
+        const response = await fetch('https://my-json-server.typicode.com/IvandevI9/api_tags_spaceappv2/Tags');
+        const data = await response.json();
+        setTags(data);
+    }
+
+    useEffect(() => {
+        obtenerTags();
+       
+    },[]);
+
+    // Función para manejar el click en un tag
+    const handleClick = async (id) => {
+        setTagSeleccionado(id);
+        console.log(tagSeleccionado);
+    }
+
+    
     return (
         <TagsContainer>
             {/* Título de la sección de tags */}
@@ -75,7 +101,7 @@ const Tags = () => {
             <Div>
                 {/* Mapeo de los tags desde el archivo JSON */}
                 {tags.map(tag => (
-                    <Tag key={tag.id}>{tag.titulo}</Tag>
+                    <Tag key={tag.id} onClick={() => handleClick(tag.id)} selected={tag.id === tagSeleccionado}>{tag.titulo}</Tag>
                 ))}
             </Div>
         </TagsContainer>
