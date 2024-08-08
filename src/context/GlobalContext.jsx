@@ -60,6 +60,33 @@ const GlobalContextProvider = ({ children }) => {
         setActivo(itemId); // Actualiza el estado con el ID del item clickeado
     };
 
+    // Estado para el tag seleccionado
+    const [tagSeleccionado, setTagSeleccionado] = useState(0);
+    // Estado para los tags
+    const [tags, setTags] = useState([]);
+
+    const obtenerTags = async () => {
+
+        // Petición a la API para obtener los tags
+        const response = await fetch('https://my-json-server.typicode.com/IvandevI9/api_tags_spaceappv2/Tags');
+        const data = await response.json();
+        setTags(data);
+    }
+
+    useEffect(() => {
+        obtenerTags();
+       
+    },[]);
+
+    // Función para manejar el click en un tag
+    const handleClickTag = async (id) => {
+        setTagSeleccionado(id);
+        console.log(tagSeleccionado);
+    }
+
+
+
+
     // Uso del useReducer para gestionar el estado global con el reductor definido
     const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -76,7 +103,7 @@ const GlobalContextProvider = ({ children }) => {
 
     // Renderizado del proveedor del contexto global con el estado y funciones de dispatch disponibles
     return (
-        <GlobalContext.Provider value={{ state, dispatch, activo, handleClick }}>
+        <GlobalContext.Provider value={{ state, dispatch, activo, handleClick, tags, handleClickTag, tagSeleccionado  }}>
             {children}
         </GlobalContext.Provider>
     );
