@@ -75,13 +75,12 @@ const GlobalContextProvider = ({ children }) => {
 
     useEffect(() => {
         obtenerTags();
-       
-    },[]);
+
+    }, []);
 
     // Función para manejar el click en un tag
     const handleClickTag = async (id) => {
         setTagSeleccionado(id);
-        console.log(tagSeleccionado);
     }
 
 
@@ -103,7 +102,7 @@ const GlobalContextProvider = ({ children }) => {
 
     // Renderizado del proveedor del contexto global con el estado y funciones de dispatch disponibles
     return (
-        <GlobalContext.Provider value={{ state, dispatch, activo, handleClick, tags, handleClickTag, tagSeleccionado  }}>
+        <GlobalContext.Provider value={{ state, dispatch, activo, handleClick, tags, handleClickTag, tagSeleccionado }}>
             {children}
         </GlobalContext.Provider>
     );

@@ -69,10 +69,10 @@ const Div = styled.div`
 // Componente funcional Tags
 const Tags = () => {
 
-    const { tags, handleClickTag, tagSeleccionado} = useGlobalContext();
+    const { tags, handleClickTag, tagSeleccionado } = useGlobalContext();
 
-    
-    
+
+
     return (
         <TagsContainer>
             {/* Título de la sección de tags */}

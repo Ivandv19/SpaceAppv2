@@ -38,7 +38,7 @@ const ImagenesContainer = styled.section`
 // Componente funcional Galeria
 const Galeria = () => {
     // Accede al estado global utilizando el contexto
-    const { state } = useContext(GlobalContext);
+    const { state, tagSeleccionado } = useContext(GlobalContext);
 
     return (
         // Muestra un componente de carga si no hay fotos disponibles
@@ -58,30 +58,41 @@ const Galeria = () => {
 
                         {/* Contenedor de imágenes */}
                         <ImagenesContainer>
-                            {/* Filtra y mapea las fotos según la consulta de búsqueda */}
-                            {state.fotosDeGaleria
-                                .filter((foto) => {
-                                    // Filtra las fotos según la consulta de búsqueda
-                                    // Normaliza y elimina diacríticos para una búsqueda insensible a mayúsculas y minúsculas
-                                    const normalizedConsulta = state.consulta
-                                        .toLocaleLowerCase()
-                                        .normalize("NFD")
-                                        .replace(/\p{Diacritic}/gu, "");
 
-                                    const normalizedTitulo = foto.titulo
-                                        .toLocaleLowerCase()
-                                        .normalize("NFD")
-                                        .replace(/\p{Diacritic}/gu, "");
+                            {tagSeleccionado ? (
+                                state.fotosDeGaleria
+                                    .filter((foto) => foto.tagId === tagSeleccionado) // Compara con tagSeleccionado
+                                    .map((foto) => (
+                                        <Imagen key={foto.id} foto={foto} />
+                                    ))
+                            ) : (
 
-                                    return (
-                                        state.consulta === "" ||
-                                        normalizedTitulo.includes(normalizedConsulta)
-                                    );
-                                })
-                                .map((foto) => (
-                                    // Componente Imagen que muestra cada foto
-                                    <Imagen key={foto.id} foto={foto} />
-                                ))}
+                                state.fotosDeGaleria
+                                    .filter((foto) => {
+                                        // Filtra las fotos según la consulta de búsqueda
+                                        // Normaliza y elimina diacríticos para una búsqueda insensible a mayúsculas y minúsculas
+                                        const normalizedConsulta = state.consulta
+                                            .toLocaleLowerCase()
+                                            .normalize("NFD")
+                                            .replace(/\p{Diacritic}/gu, "");
+
+                                        const normalizedTitulo = foto.titulo
+                                            .toLocaleLowerCase()
+                                            .normalize("NFD")
+                                            .replace(/\p{Diacritic}/gu, "");
+
+                                        return (
+                                            state.consulta === "" ||
+                                            normalizedTitulo.includes(normalizedConsulta)
+                                        );
+                                    })
+                                    .map((foto) => (
+                                        // Componente Imagen que muestra cada foto
+                                        <Imagen key={foto.id} foto={foto} />
+                                    ))
+                            )
+                            }
+
                         </ImagenesContainer>
                     </SeccionFluida>
 
