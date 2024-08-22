@@ -1,18 +1,20 @@
 import styled from "styled-components";
 import Imagen from "../Galeria/Imagen";
 import BotonIcono from "../BotonIcono";
-import { useContext } from "react";
-import { GlobalContext } from "../../context/GlobalContext";
 import useFotoModal from "../../hooks/useFotoModal"; // Importa el hook personalizado
 
 // Estilos para el overlay oscuro de fondo
 const Overlay = styled.div`
     background-color: rgba(0, 0, 0, .7);
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 // Estilos para el diálogo modal
@@ -31,6 +33,18 @@ const DialogEstilizado = styled.dialog`
             top: 20px;
             right: 60px;
         }
+    }
+
+    @media (min-width: 600px) and (max-width: 1199px) {
+        width: 100%;
+        height: auto;
+
+    }
+
+    @media (max-width: 599px){
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
     }
 `;
 
