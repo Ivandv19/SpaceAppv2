@@ -80,10 +80,26 @@ const GlobalContextProvider = ({ children }) => {
 
     // Función para manejar el click en un tag
     const handleClickTag = async (id) => {
-        setTagSeleccionado(id);
+        // Si el id del tag clickeado es el mismo que el tagSeleccionado, lo deselecciona (pone en null)
+        // Si no, lo selecciona
+        setTagSeleccionado(prevId => (prevId === id ? null : id));
+
     }
 
+ 
 
+
+    const [videosEnTag, setVideosEnTag] = useState([]);
+
+    const filtrarVideosPorTag = () => {
+        const videosFiltrados = state.fotosDeGaleria.filter((foto) => foto.tagId === tagSeleccionado) // Compara con tagSeleccionado
+        setVideosEnTag(videosFiltrados);
+
+    }
+
+    useEffect(() => {
+        filtrarVideosPorTag();
+    }, [tagSeleccionado])
 
 
     // Uso del useReducer para gestionar el estado global con el reductor definido
@@ -102,7 +118,7 @@ const GlobalContextProvider = ({ children }) => {
 
     // Renderizado del proveedor del contexto global con el estado y funciones de dispatch disponibles
     return (
-        <GlobalContext.Provider value={{ state, dispatch, activo, handleClick, tags, handleClickTag, tagSeleccionado }}>
+        <GlobalContext.Provider value={{ state, dispatch, activo, handleClick, tags, handleClickTag, tagSeleccionado, videosEnTag }}>
             {children}
         </GlobalContext.Provider>
     );

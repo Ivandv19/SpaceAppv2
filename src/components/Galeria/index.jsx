@@ -3,7 +3,7 @@ import Titulo from "../Titulo";
 import Populares from "./Populares";
 import Tag from "./Tags";
 import Imagen from "./Imagen";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
 import Cargando from "../Cargando";
 
@@ -38,7 +38,27 @@ const ImagenesContainer = styled.section`
 // Componente funcional Galeria
 const Galeria = () => {
     // Accede al estado global utilizando el contexto
-    const { state, tagSeleccionado } = useContext(GlobalContext);
+    const { state, tagSeleccionado, videosEnTag } = useContext(GlobalContext);
+
+    // Función para filtrar fotos según la consulta de búsqueda
+    const filtrarFotos = (fotos) => {
+        const normalizedConsulta = state.consulta
+            .toLocaleLowerCase()
+            .normalize("NFD")
+            .replace(/\p{Diacritic}/gu, "");
+
+        return fotos.filter(foto => {
+            const normalizedTitulo = foto.titulo
+                .toLocaleLowerCase()
+                .normalize("NFD")
+                .replace(/\p{Diacritic}/gu, "");
+            return state.consulta === "" || normalizedTitulo.includes(normalizedConsulta);
+        });
+    };
+
+    // Determina qué fotos mostrar según si hay un tag seleccionado o no
+    const fotosAmostrar = tagSeleccionado ? videosEnTag : state.fotosDeGaleria;
+    const fotosFiltradas = filtrarFotos(fotosAmostrar);
 
     return (
         // Muestra un componente de carga si no hay fotos disponibles
@@ -58,41 +78,13 @@ const Galeria = () => {
 
                         {/* Contenedor de imágenes */}
                         <ImagenesContainer>
-
-                            {tagSeleccionado ? (
-                                state.fotosDeGaleria
-                                    .filter((foto) => foto.tagId === tagSeleccionado) // Compara con tagSeleccionado
-                                    .map((foto) => (
-                                        <Imagen key={foto.id} foto={foto} />
-                                    ))
+                            {fotosFiltradas.length > 0 ? (
+                                fotosFiltradas.map((foto) => (
+                                    <Imagen key={foto.id} foto={foto} />
+                                ))
                             ) : (
-
-                                state.fotosDeGaleria
-                                    .filter((foto) => {
-                                        // Filtra las fotos según la consulta de búsqueda
-                                        // Normaliza y elimina diacríticos para una búsqueda insensible a mayúsculas y minúsculas
-                                        const normalizedConsulta = state.consulta
-                                            .toLocaleLowerCase()
-                                            .normalize("NFD")
-                                            .replace(/\p{Diacritic}/gu, "");
-
-                                        const normalizedTitulo = foto.titulo
-                                            .toLocaleLowerCase()
-                                            .normalize("NFD")
-                                            .replace(/\p{Diacritic}/gu, "");
-
-                                        return (
-                                            state.consulta === "" ||
-                                            normalizedTitulo.includes(normalizedConsulta)
-                                        );
-                                    })
-                                    .map((foto) => (
-                                        // Componente Imagen que muestra cada foto
-                                        <Imagen key={foto.id} foto={foto} />
-                                    ))
-                            )
-                            }
-
+                                <p>No se encontraron fotos.</p>
+                            )}
                         </ImagenesContainer>
                     </SeccionFluida>
 
