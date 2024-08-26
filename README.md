@@ -34,7 +34,7 @@ Este proyecto es una aplicación para gestionar y visualizar una galería de fot
 1. **Clonar el Repositorio:** Clona este repositorio en tu máquina local utilizando Git.
 
 ```bash
-   git clone https://github.com/Ivanmx19/SpaceAppv2.git
+   https://github.com/IvandevI9/SpaceAppv2.git
 ```
 2. **Instalar Dependencias:** Navega al directorio del proyecto y ejecuta:
 
