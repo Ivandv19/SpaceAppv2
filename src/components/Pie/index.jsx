@@ -54,7 +54,8 @@ const Pie = () => {
                     </a>
                 </li>
             </IconoContainer>
-            <PieTexto>Creado por Ivan Cruz - 2024 🇲🇽 <br /> Estudiante ONE (G6) - Oracle Next Education </PieTexto>
+            <PieTexto> Desarrollado por Alura Latam y por Ivan Cruz <br /> Estudiante ONE (G6) -
+            Oracle Next Education - 2024 🇲🇽 </PieTexto>
         </PieEstilizado>
     );
 }
