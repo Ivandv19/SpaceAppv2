@@ -12,7 +12,7 @@ Este proyecto es una aplicación para gestionar y visualizar una galería de fot
 
 ## Uso
 
-1. **Visualización del Proyecto:** Instala el repositorio de manera local y abre el archivo `index.html` en tu navegador web o visita el enlace desplegado en [Vercel](https://space-appv2.vercel.app/).
+1. **Visualización del Proyecto:** Para visualizar el proyecto, sigue los pasos que se encuentran en la sección [Instalación](#instalación) o visita el enlace desplegado en [Vercel](https://space-appv2.vercel.app/).
 2. **Buscar por Título:** Usa la barra de búsqueda para encontrar fotos por título.
 3. **Buscar por Tags:** Usa la lista de tags seleccionables para navegar en la galería.
 4. **Ver Detalles de Fotos:** Puedes interactuar con la foto como marcarla como favorita o solicitar zoom.
