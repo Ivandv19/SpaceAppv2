@@ -12,6 +12,7 @@ const HeaderEstilizado = styled.header`
     top: 0;
     box-sizing: border-box;
     background: linear-gradient(175deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
+    
     img {
         width: 212px; /* Estilo específico para la imagen del logo */
     }

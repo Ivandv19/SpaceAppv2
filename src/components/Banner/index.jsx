@@ -19,7 +19,10 @@ const FigureEstilizada = styled.figure`
   background-size: cover; /* Ajustar el tamaño de la imagen de fondo */
   box-sizing: border-box; // Caja de borde para incluir relleno y bordes en el ancho y alto
 
-  
+  @media (max-width: 599px) {
+    width: 100%;
+    justify-content: center;
+  }
 
 
 `;
@@ -32,6 +35,13 @@ const TituloEstilizado = styled.h1`
   color: #ffffff; 
   max-width: 300px; 
   padding: 0 64px; 
+
+  @media (max-width: 599px) {
+    font-size: 32px;
+    padding: 0 10px;
+    font-weight: 550;
+    text-align: center;
+  }
 `;
 
 // Componente funcional Banner que muestra un título sobre una imagen de fondo

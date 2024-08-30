@@ -26,8 +26,10 @@ const ItemListaEstilizado = styled.li`
 `;
 
 const Seccion = styled.div`
+
 @media (max-width: 599px){
     display: ${props => (props.$activo ? "block" : "none")};
+    font-size: 22px;
 }
 
 `

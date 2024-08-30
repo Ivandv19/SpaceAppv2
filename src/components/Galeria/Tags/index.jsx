@@ -16,7 +16,7 @@ const TagsContainer = styled.section`
     }
 
     @media (max-width: 599px) {
-        gap: 5px;
+        gap: 20px;
         flex-direction: column;
     }
 
@@ -42,6 +42,10 @@ const Tag = styled.button`
     box-sizing: border-box;
     border: 2px solid transparent;
     border-color: ${(props) => (props.selected ? '#C98CF1' : 'transparent')}; 
+
+    @media (max-width: 599px) {
+        font-size: 20px;
+    }
     
 `;
 

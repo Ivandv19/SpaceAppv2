@@ -12,6 +12,7 @@ const ContainerEstilizado = styled.div`
 
   @media (max-width: 599px) {
     width: 100%;
+
 }
 
 /* Media query para tabletas */
@@ -39,6 +40,8 @@ const CampoTextoEstilizado = styled.input`
 
   @media (max-width: 599px) {
     width: 100%;
+    padding: 10px;
+    font-size: 16px;
 
 }
 
