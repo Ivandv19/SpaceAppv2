@@ -5,7 +5,7 @@ import Tag from "./Tags";
 import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
 import Cargando from "../Cargando";
-import MostrarFotos from './MostrarFotos/index'
+import MostrarFotos from './MostrarFotos'
 
 
 // Contenedor principal de la galería con estilos
