@@ -2,10 +2,10 @@ import styled from "styled-components";
 import Titulo from "../Titulo";
 import Populares from "./Populares";
 import Tag from "./Tags";
-import Imagen from "./Imagen";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
 import Cargando from "../Cargando";
+import MostrarFotos from "./mostrarfotos";
 
 // Contenedor principal de la galería con estilos
 const GaleriaContainer = styled.div`
@@ -22,7 +22,6 @@ const GaleriaContainer = styled.div`
 const SeccionFluida = styled.section`
 width: 100%;
 
-
 `;
 
 // Contenedor de imágenes con estilos
@@ -37,28 +36,8 @@ const ImagenesContainer = styled.section`
 
 // Componente funcional Galeria
 const Galeria = () => {
-    // Accede al estado global utilizando el contexto
-    const { state, tagSeleccionado, videosEnTag } = useContext(GlobalContext);
 
-    // Función para filtrar fotos según la consulta de búsqueda
-    const filtrarFotos = (fotos) => {
-        const normalizedConsulta = state.consulta
-            .toLocaleLowerCase()
-            .normalize("NFD")
-            .replace(/\p{Diacritic}/gu, "");
-
-        return fotos.filter(foto => {
-            const normalizedTitulo = foto.titulo
-                .toLocaleLowerCase()
-                .normalize("NFD")
-                .replace(/\p{Diacritic}/gu, "");
-            return state.consulta === "" || normalizedTitulo.includes(normalizedConsulta);
-        });
-    };
-
-    // Determina qué fotos mostrar según si hay un tag seleccionado o no
-    const fotosAmostrar = tagSeleccionado ? videosEnTag : state.fotosDeGaleria;
-    const fotosFiltradas = filtrarFotos(fotosAmostrar);
+    const { state } = useContext(GlobalContext);
 
     return (
         // Muestra un componente de carga si no hay fotos disponibles
@@ -68,26 +47,17 @@ const Galeria = () => {
             <>
                 {/* Componente Tag para mostrar etiquetas */}
                 <Tag />
-
                 {/* Contenedor principal de la galería */}
                 <GaleriaContainer>
                     {/* Sección fluida que ocupa el espacio restante */}
                     <SeccionFluida>
                         {/* Título de la galería */}
                         <Titulo>Navegue por la galería</Titulo>
-
                         {/* Contenedor de imágenes */}
                         <ImagenesContainer>
-                            {fotosFiltradas.length > 0 ? (
-                                fotosFiltradas.map((foto) => (
-                                    <Imagen key={foto.id} foto={foto} />
-                                ))
-                            ) : (
-                                <p>No se encontraron fotos.</p>
-                            )}
+                            <MostrarFotos />
                         </ImagenesContainer>
                     </SeccionFluida>
-
                     {/* Componente Populares para mostrar las fotos más populares */}
                     <Populares />
                 </GaleriaContainer>
