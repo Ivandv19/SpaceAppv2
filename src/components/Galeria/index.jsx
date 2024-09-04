@@ -7,6 +7,7 @@ import { GlobalContext } from "../../context/GlobalContext";
 import Cargando from "../Cargando";
 import MostrarFotos from "./mostrarfotos";
 
+
 // Contenedor principal de la galería con estilos
 const GaleriaContainer = styled.div`
     width: 100%;
