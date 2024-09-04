@@ -11,8 +11,6 @@ const P = styled.p`
     margin: 50px auto;
 `
 
-
-
 const MostrarFotos = () => {
 
     // Accede al estado global utilizando el contexto
