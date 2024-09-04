@@ -1,6 +1,15 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../../context/GlobalContext";
 import Imagen from "../Imagen";
+import styled from "styled-components";
+
+
+
+const P = styled.p`
+    font-size: 16px;
+    color: red;
+    margin: 50px auto;
+`
 
 
 
@@ -37,7 +46,7 @@ const MostrarFotos = () => {
                     <Imagen key={foto.id} foto={foto} />
                 ))
             ) : (
-                <p>No se encontraron fotos.</p>
+                <P>No se encontraron fotos.</P>
             )}
         </>
     );
