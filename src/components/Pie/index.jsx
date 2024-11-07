@@ -37,25 +37,32 @@ const PieTexto = styled.p`
 const Pie = () => {
     return (
         <PieEstilizado>
+            {/* Contenedor de los iconos de redes sociales */}
             <IconoContainer>
+                {/* Icono de Facebook */}
                 <li>
                     <a href="#">
                         <img src="/img/redes/facebook.svg" alt="Facebook" />
                     </a>
                 </li>
+                {/* Icono de Twitter */}
                 <li>
                     <a href="#">
                         <img src="/img/redes/twitter.svg" alt="Twitter" />
                     </a>
                 </li>
+                {/* Icono de Instagram */}
                 <li>
                     <a href="#">
                         <img src="/img/redes/instagram.svg" alt="Instagram" />
                     </a>
                 </li>
             </IconoContainer>
-            <PieTexto> Desarrollado por Alura Latam y por Ivan Cruz <br /> Estudiante ONE (G6) -
-            Oracle Next Education - 2024 🇲🇽 </PieTexto>
+            {/* Texto del pie de página */}
+            <PieTexto>
+                Desarrollado por Alura Latam y por Ivan Cruz <br />
+                Estudiante ONE (G6) - Oracle Next Education - 2024 🇲🇽
+            </PieTexto>
         </PieEstilizado>
     );
 }

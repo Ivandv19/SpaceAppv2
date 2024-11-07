@@ -14,7 +14,7 @@ const HeaderEstilizado = styled.header`
     background: linear-gradient(175deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
     
     img {
-        width: 212px; /* Estilo específico para la imagen del logo */
+        width: 212px; 
     }
 
     @media (max-width: 599px) {
@@ -29,8 +29,7 @@ const HeaderEstilizado = styled.header`
 
     justify-content: space-between;
     gap: 50px;
- 
-  }
+    }
 `;
 
 const Cabecera = () => {

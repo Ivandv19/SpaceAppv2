@@ -18,9 +18,9 @@ const FondoGradiente = styled.div`
 
 // Contenedor principal de la aplicación
 const AppContainer = styled.div`
-  width: 100%; // Ancho fijo máximo
-  max-width: 100%; // Ancho máximo para adaptabilidad
-  margin: 0 auto; // Centrado horizontal en la página
+  width: 100%; 
+  max-width: 100%; 
+  margin: 0 auto; 
   padding-top:200px;
   box-sizing: border-box;
   
@@ -37,8 +37,8 @@ const AppContainer = styled.div`
 
 // Contenedor principal para el contenido principal y lateral
 const MainContainer = styled.main`
-  display: flex; // Utilizar flexbox para diseño flexible
-  gap: 24px; // Espacio entre elementos
+  display: flex; 
+  gap: 24px; 
   padding: 0;
 
 
@@ -57,13 +57,13 @@ const MainContainer = styled.main`
 
 // Contenedor para la galería principal y otros elementos del contenido
 const ContenidoGaleria = styled.section`
-  display: flex; // Mostrar elementos en fila (columna en pantallas pequeñas)
-  flex-direction: column; // Disposición de columna para contenido flexible
+  display: flex; 
+  flex-direction: column; 
   flex-grow: 1; // Permitir que este contenedor crezca para ocupar espacio disponible
-  padding: 0 20px; // Relleno horizontal  para evitar que el contenido toque los bordes
+  padding: 0 20px; 
 
   @media (max-width: 599px) {
-    padding: 0; // Eliminar relleno horizontal en dispositivos móviles
+    padding: 0; 
   }
 `;
 

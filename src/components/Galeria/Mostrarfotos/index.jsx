@@ -38,11 +38,14 @@ const MostrarFotos = () => {
 
     return (
         <>
+            {/* Verifica si hay fotos filtradas. Si hay, las mapea para renderizar cada imagen */}
             {fotosFiltradas.length > 0 ? (
                 fotosFiltradas.map((foto) => (
+                    // Renderiza un componente Imagen para cada foto filtrada
                     <Imagen key={foto.id} foto={foto} />
                 ))
             ) : (
+                // Si no hay fotos filtradas, muestra un mensaje indicando que no se encontraron fotos
                 <P>No se encontraron fotos.</P>
             )}
         </>

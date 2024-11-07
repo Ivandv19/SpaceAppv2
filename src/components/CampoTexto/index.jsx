@@ -19,6 +19,7 @@ const ContainerEstilizado = styled.div`
 @media (min-width: 600px) and (max-width: 1199px) {
 
 width: 100%;
+
 }
 `;
 

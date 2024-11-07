@@ -35,12 +35,15 @@ const Seccion = styled.div`
 `
 
 
-
 const ItemNavegacion = ({ children, iconoActivo, iconoInactivo, activo, onClick }) => {
     return (
         <ItemListaEstilizado $activo={activo} onClick={onClick}>
-            <img src={activo ? iconoActivo : iconoInactivo}
-                alt="Icono de navegación" />
+            {/* Renderiza el ícono activo o inactivo dependiendo del estado 'activo'. */}
+            <img
+                src={activo ? iconoActivo : iconoInactivo}
+                alt="Icono de navegación"
+            />
+            {/* Renderiza la sección con el texto (children) dentro, aplicando estilo según el estado 'activo'. */}
             <Seccion $activo={activo}>{children}</Seccion>
         </ItemListaEstilizado>
     );

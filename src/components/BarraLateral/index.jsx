@@ -36,60 +36,64 @@ const ListaEstilizada = styled.ul`
     box-sizing: border-box;
   }
 
-  /* Media query para tabletas */
 
 `;
 
 
-
 const BarraLateral = () => {
-
+    // Obtiene el estado 'activo' y la función 'handleClick' desde el contexto global.
     const { activo, handleClick } = useGlobalContext();
 
     return (
         <aside>
             <nav>
+                {/* Lista de navegación estilizada */}
                 <ListaEstilizada>
+                    {/* Primer item de navegación - 'Inicio' */}
                     <ItemNavegacion
-                        iconoActivo="/iconos/home-activo.png"
-                        iconoInactivo="/iconos/home-inactivo.png"
-                        activo={activo === 'inicio'}
-                        onClick={() => handleClick('inicio')}
-                        style={{ cursor: 'pointer' }}
+                        iconoActivo="/iconos/home-activo.png"  // Icono activo para la opción 'Inicio'
+                        iconoInactivo="/iconos/home-inactivo.png"  // Icono inactivo para la opción 'Inicio'
+                        activo={activo === 'inicio'}  // Verifica si 'inicio' es el estado activo
+                        onClick={() => handleClick('inicio')}  // Al hacer clic, cambia el estado a 'inicio'
+                        style={{ cursor: 'pointer' }}  // Establece el cursor como puntero al pasar por encima
                     >
-                        <section>Inicio</section>
+                        <section>Inicio</section>  {/* Texto que se muestra en este item de navegación */}
                     </ItemNavegacion>
+                    {/* Segundo item de navegación - 'Más vistas' */}
                     <ItemNavegacion
                         iconoActivo="/iconos/mas-vistas-activo.png"
                         iconoInactivo="/iconos/mas-vistas-inactivo.png"
-                        activo={activo === 'masVistas'}
+                        activo={activo === 'masVistas'}  // Verifica si 'masVistas' es el estado activo
                         onClick={() => handleClick('masVistas')}
                         style={{ cursor: 'pointer' }}
                     >
                         <section>Más vistas</section>
                     </ItemNavegacion>
+                    {/* Tercer item de navegación - 'Más Me Gusta' */}
                     <ItemNavegacion
                         iconoActivo="/iconos/me-gusta-activo.png"
                         iconoInactivo="/iconos/me-gusta-inactivo.png"
-                        activo={activo === 'meGusta'}
+                        activo={activo === 'meGusta'}  // Verifica si 'meGusta' es el estado activo
                         onClick={() => handleClick('meGusta')}
                         style={{ cursor: 'pointer' }}
                     >
                         <section>Más Me Gusta</section>
                     </ItemNavegacion>
+                    {/* Cuarto item de navegación - 'Nuevas' */}
                     <ItemNavegacion
                         iconoActivo="/iconos/nuevas-activo.png"
                         iconoInactivo="/iconos/nuevas-inactivo.png"
-                        activo={activo === 'nuevas'}
+                        activo={activo === 'nuevas'}  // Verifica si 'nuevas' es el estado activo
                         onClick={() => handleClick('nuevas')}
                         style={{ cursor: 'pointer' }}
                     >
                         <section>Nuevas</section>
                     </ItemNavegacion>
+                    {/* Quinto item de navegación - 'Sorpréndeme' */}
                     <ItemNavegacion
                         iconoActivo="/iconos/sorprendeme-activo.png"
                         iconoInactivo="/iconos/sorprendeme-inactivo.png"
-                        activo={activo === 'sorprendeme'}
+                        activo={activo === 'sorprendeme'}  // Verifica si 'sorprendeme' es el estado activo
                         onClick={() => handleClick('sorprendeme')}
                         style={{ cursor: 'pointer' }}
                     >
