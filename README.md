@@ -60,3 +60,11 @@ npm run dev
 ## Licencia
 - Este proyecto está bajo la Licencia MIT.
 
+## Imagen
+
+![spaceappv2](https://github.com/user-attachments/assets/7ef8d42d-5974-4da4-a11d-e96d9a9a80b5)
+
+## Proyecto En Portafolio Web ##3
+
+-Este proyecto es parte de los proyectos mostrados en mi portafolio web
+
