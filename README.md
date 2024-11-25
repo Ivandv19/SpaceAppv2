@@ -1,5 +1,7 @@
 #  Space Appv2
 
+## Descripción
+
 Este proyecto es una aplicación para gestionar y visualizar una galería de fotos, con funcionalidades para filtrar y buscar contenido por una palabra o por tags. Está diseñado para proporcionar una experiencia interactiva y visualmente atractiva.
 
 ## Características
