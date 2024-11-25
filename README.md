@@ -22,14 +22,14 @@ Este proyecto es una aplicación para gestionar y visualizar una galería de fot
 
 ## Tecnologías Utilizadas
 
-- **HTML**
-- **CSS**
-- **JavaScript**
-- **React**
-- **Styled Components**
-- **My JSON Server**
-- **Node.js**
-- **Vite**
+- HTML
+- CSS
+- JavaScript
+- React
+- Styled Components
+- My JSON Server
+- Node.js
+- Vite
 
 ## Instalación
 
