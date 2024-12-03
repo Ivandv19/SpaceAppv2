@@ -59,7 +59,7 @@ npm run dev
 
 ## Despliegue
 
-- El sitio web está desplegado en Vercel y se puede acceder a través del siguiente enlace: [SpaceAppV2](https://space-appv2.vercel.app/).
+- El sitio web está desplegado en Vercel y se puede acceder a través del siguiente enlace: [SpaceAppV2]( https://space-appv2.vercel.app/ ).
 
 ## Licencia
 
@@ -67,7 +67,7 @@ npm run dev
 
 ## Imagen
 
-![spaceappv2](https://github.com/user-attachments/assets/2adb0838-4784-49f3-98c8-ad95975097ca)
+![spaceappv2]( https://github.com/user-attachments/assets/2adb0838-4784-49f3-98c8-ad95975097ca )
 
 ## Proyecto En Portafolio Web ##4
 
