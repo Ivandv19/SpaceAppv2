@@ -1,4 +1,4 @@
-#  Space App v2
+# Space App v2
 
 ## Descripción
 
@@ -38,6 +38,7 @@ Este proyecto es una aplicación para gestionar y visualizar una galería de fot
 ```bash
 https://github.com/IvandevI9/SpaceAppv2.git
 ```
+
 2. **Instalar Dependencias:** Navega al directorio del proyecto y ejecuta:
 
 ```bash
@@ -51,22 +52,23 @@ npm run dev
 ```
 
 ## Créditos
+
 - Este proyecto fue desarrollado como parte de un ejercicio de desarrollo web.
 - Desarrollado por [Alura Latam](https://www.linkedin.com/company/alura-latam/).
 - Desarrollado por [Ivan Cruz](https://www.linkedin.com/in/ivan-cruz-1906mx/).
 
 ## Despliegue
 
-- El sitio web está desplegado en Vercel y se puede acceder a través del siguiente enlace: [SpaceAppV2]( https://space-appv2.vercel.app/ ).
+- El sitio web está desplegado en Vercel y se puede acceder a través del siguiente enlace: [SpaceAppV2](https://space-appv2.vercel.app/).
 
 ## Licencia
+
 - Este proyecto está bajo la Licencia MIT.
 
 ## Imagen
 
-![spaceappv2]( https://github.com/user-attachments/assets/2adb0838-4784-49f3-98c8-ad95975097ca )
+![spaceappv2](https://github.com/user-attachments/assets/2adb0838-4784-49f3-98c8-ad95975097ca)
 
 ## Proyecto En Portafolio Web ##4
 
 -Este proyecto es parte de los proyectos mostrados en mi portafolio web
-

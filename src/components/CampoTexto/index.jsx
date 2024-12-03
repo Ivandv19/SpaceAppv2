@@ -12,21 +12,18 @@ const ContainerEstilizado = styled.div`
 
   @media (max-width: 599px) {
     width: 100%;
+  }
 
-}
-
-/* Media query para tabletas */
-@media (min-width: 600px) and (max-width: 1199px) {
-
-width: 100%;
-
-}
+  /* Media query para tabletas */
+  @media (min-width: 600px) and (max-width: 1199px) {
+    width: 100%;
+  }
 `;
 
 // Estilo para el campo de texto
 const CampoTextoEstilizado = styled.input`
- width: 100%;
- height: 100%;
+  width: 100%;
+  height: 100%;
   padding: 12px 40px;
   border-radius: 10px;
   border: 2px solid;
@@ -43,14 +40,12 @@ const CampoTextoEstilizado = styled.input`
     width: 100%;
     padding: 10px;
     font-size: 16px;
+  }
 
-}
-
-/* Media query para tabletas */
-@media (min-width: 600px) and (max-width: 1199px) {
-
-width: 100%;
-}
+  /* Media query para tabletas */
+  @media (min-width: 600px) and (max-width: 1199px) {
+    width: 100%;
+  }
 `;
 
 // Estilo para el ícono de lupa
@@ -63,35 +58,34 @@ const IconoLupa = styled.img`
 `;
 
 const CampoTexto = () => {
-    // Referencia al input del campo de texto
-    const cajaConsulta = useRef(null);
+  // Referencia al input del campo de texto
+  const cajaConsulta = useRef(null);
 
-    // Contexto global para manejar el estado global
-    const { dispatch } = useContext(GlobalContext);
+  // Contexto global para manejar el estado global
+  const { dispatch } = useContext(GlobalContext);
 
-    return (
-        <ContainerEstilizado>
-            {/* Campo de texto estilizado con referencia */}
-            <CampoTextoEstilizado
-                ref={cajaConsulta}
-                type="search"
-                placeholder="¿Qué estás buscando?"
-
-            />
-            {/* Ícono de lupa para enviar la consulta */}
-            <IconoLupa
-                src={search}
-                alt="ícono de lupa"
-                onClick={() => {
-                    // Envía la consulta al contexto global
-                    dispatch({
-                        type: "SET_CONSULTA",
-                        payload: cajaConsulta.current.value,
-                    });
-                }}
-            />
-        </ContainerEstilizado>
-    );
+  return (
+    <ContainerEstilizado>
+      {/* Campo de texto estilizado con referencia */}
+      <CampoTextoEstilizado
+        ref={cajaConsulta}
+        type="search"
+        placeholder="¿Qué estás buscando?"
+      />
+      {/* Ícono de lupa para enviar la consulta */}
+      <IconoLupa
+        src={search}
+        alt="ícono de lupa"
+        onClick={() => {
+          // Envía la consulta al contexto global
+          dispatch({
+            type: "SET_CONSULTA",
+            payload: cajaConsulta.current.value,
+          });
+        }}
+      />
+    </ContainerEstilizado>
+  );
 };
 
 export default CampoTexto;

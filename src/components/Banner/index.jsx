@@ -7,7 +7,10 @@ const getBackgroundImage = (image) => {
 
 // Componente estilizado
 const FigureEstilizada = styled.figure`
-  background-image: ${(props) => getBackgroundImage(props.$backgroundImage)}; /* Imagen de fondo del banner */
+  background-image: ${(props) =>
+    getBackgroundImage(
+      props.$backgroundImage,
+    )}; /* Imagen de fondo del banner */
   flex-grow: 1; /* Permitir que crezca dentro de su contenedor */
   background-repeat: no-repeat; /* No repetir la imagen de fondo */
   display: flex; /* Mostrar como flexbox para alinear elementos */
@@ -23,18 +26,16 @@ const FigureEstilizada = styled.figure`
     width: 100%;
     justify-content: center;
   }
-
-
 `;
 
 // Estilo para el título del banner
 const TituloEstilizado = styled.h1`
-  font-weight: 400; 
-  font-size: 40px; 
-  line-height: 48px; 
-  color: #ffffff; 
-  max-width: 300px; 
-  padding: 0 64px; 
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #ffffff;
+  max-width: 300px;
+  padding: 0 64px;
 
   @media (max-width: 599px) {
     font-size: 32px;
