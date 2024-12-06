@@ -1,5 +1,8 @@
 # Space App v2
 
+[![wakatime](https://wakatime.com/badge/github/Ivandv19/space-app-v2.svg)](https://wakatime.com/badge/github/Ivandv19/space-app-v2)
+[![wakatime](https://wakatime.com/badge/user/c585b1da-c687-4d3b-89c1-72901e86fb52/project/f91d69af-203e-4029-89ca-92eabffafe52.svg)](https://wakatime.com/badge/user/c585b1da-c687-4d3b-89c1-72901e86fb52/project/f91d69af-203e-4029-89ca-92eabffafe52)
+
 ## Descripción
 
 Este proyecto es una aplicación para gestionar y visualizar una galería de fotos, con funcionalidades para filtrar y buscar contenido por una palabra o por tags. Está diseñado para proporcionar una experiencia interactiva y visualmente atractiva.
